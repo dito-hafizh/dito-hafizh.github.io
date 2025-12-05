@@ -23,12 +23,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
-        <div className='flex flex-row justify-around items-center p-desktop'>
-          <ProfilePic />
-          <Navbar />
+      <body
+        className={`${inter.variable} items-center justify-center antialiased`}
+      >
+        <div className="mx-auto w-9/10">
+          <div className="p-desktop gap-section flex flex-row items-center justify-center">
+            <div className="flex basis-1/2 items-center justify-start">
+              <ProfilePic />
+            </div>
+            <div className="flex basis-1/2 items-center justify-center">
+              <Navbar />
+            </div>
+          </div>
+          {children}
         </div>
-        {children}
       </body>
     </html>
   );
