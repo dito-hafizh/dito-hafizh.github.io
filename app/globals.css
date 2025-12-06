@@ -9,8 +9,11 @@
   --spacing-mobile: 0.5rem;
   --spacing-desktop: 1rem;
   --spacing-section: 2rem;
-
+  --spacing-section-md: 4rem;
   --spacing-content: 10px;
+
+  --text-constant-lg: 40px;
+  --text-constant-md: 24px;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

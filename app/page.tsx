@@ -1,7 +1,8 @@
-import About from '@/sections/about';
+import AboutSection from '@/sections/about-section';
+import WorkEducationSection from '@/sections/work-education-section';
 
 export default function Home() {
-  const sections = [About];
+  const sections = [AboutSection, WorkEducationSection];
 
   return (
     <div className="flex flex-col items-start justify-center">

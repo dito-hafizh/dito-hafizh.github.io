@@ -1,0 +1,34 @@
+import { EDUCATIONS } from '@/data';
+import { IoIosSchool } from 'react-icons/io';
+import { RiHomeOfficeLine } from 'react-icons/ri';
+import { SiInternetcomputer } from 'react-icons/si';
+
+export default function EducationSection() {
+  return (
+    <div className="gap-section flex flex-col">
+      <div className="gap-content flex items-center">
+        <IoIosSchool className="text-constant-lg font-bold" />
+        <h1 className="text-constant-lg font-bold">Education</h1>
+      </div>
+      {EDUCATIONS.map((education) => (
+        <div key={education.school} className="gap-content flex flex-col">
+          <div className="gap-content flex items-center">
+            <RiHomeOfficeLine className="text-constant-lg font-bold" />
+            <h2 className="text-constant-md font-bold">{education.school}</h2>
+          </div>
+          <h3>
+            {education.city}, {education.country}
+          </h3>
+          <p className="font-bold text-gray-500">
+            {education.startDate} - {education.endDate}
+          </p>
+          <div className="gap-content flex items-center">
+            <SiInternetcomputer className="text-constant-md font-bold" />
+            <h3 className="font-bold">{education.degree}</h3>
+          </div>
+          <p className="text-justify">{education.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
