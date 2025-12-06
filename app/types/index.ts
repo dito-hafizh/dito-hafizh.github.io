@@ -6,6 +6,8 @@ export type Me = {
   phone: string;
   city: string;
   country: string;
+  github: string;
+  linkedin: string;
 };
 
 export type Work = {

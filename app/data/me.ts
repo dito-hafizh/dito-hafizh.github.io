@@ -13,4 +13,6 @@ export const ME: Me = {
   phone: '+62 857 3008 4960',
   city: 'Surabaya',
   country: 'Indonesia',
+  github: 'https://github.com/dito-hafizh',
+  linkedin: 'https://id.linkedin.com/in/dito-hafizh-b882596b',
 };

@@ -1,6 +1,7 @@
 'use client';
 
 import { ME } from '@/data';
+import Link from 'next/link';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function AboutSection() {
@@ -19,8 +20,12 @@ export default function AboutSection() {
             {ME.city}, {ME.country}
           </h1>
           <div className="gap-content flex flex-row">
-            <FaLinkedin className="text-5xl" />
-            <FaGithub className="text-5xl" />
+            <Link href={ME.linkedin} target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="text-5xl" />
+            </Link>
+            <Link href={ME.github} target="_blank" rel="noopener noreferrer">
+              <FaGithub className="text-5xl" />
+            </Link>
           </div>
         </div>
       </div>
