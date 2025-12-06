@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: `${ME.name} Portfolio`,
     images: [
       {
-        url: '/profile.webp',
+        url: 'https://dito-hafizh.github.io/profile.webp',
         width: 1200,
         height: 630,
         alt: `${ME.name} - ${ME.profession}`,
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${ME.name} | ${ME.profession}`,
     description: ME.description,
-    images: ['/profile.webp'],
+    images: ['https://dito-hafizh.github.io/profile.webp'],
   },
   robots: {
     index: true,
