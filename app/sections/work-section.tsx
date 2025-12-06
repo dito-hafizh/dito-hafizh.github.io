@@ -31,7 +31,7 @@ export default function WorkSection() {
               )}
             </h2>
             <h3>
-              {work.city}, {work.country}
+              {[work.city, work.country].filter(Boolean).join(', ')}
             </h3>
             {work.positions.map((position) => (
               <div key={position.position}>

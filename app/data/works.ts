@@ -48,8 +48,7 @@ export const WORKS: Work[] = [
                 on Google Cloud. The apps mostly focus on Chat and Map for property maintenance.`,
       },
     ],
-    city: 'Singapore',
-    country: 'Singapore',
+    country: 'Batam & Singapore',
   },
   {
     company: 'PT Calvindo Global Utama',

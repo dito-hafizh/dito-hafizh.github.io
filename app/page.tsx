@@ -1,10 +1,11 @@
 import AboutSection from '@/sections/about-section';
+import ProjectSection from '@/sections/project-section';
 import WorkEducationSection from '@/sections/work-education-section';
 
 export default function Home() {
-  const sections = [AboutSection, WorkEducationSection];
+  const sections = [AboutSection, WorkEducationSection, ProjectSection];
 
-  return (
+  return (  
     <div className="flex flex-col items-start justify-center">
       {sections.map((SectionComponent, index) => (
         <div key={index} className="p-desktop py-section w-full">

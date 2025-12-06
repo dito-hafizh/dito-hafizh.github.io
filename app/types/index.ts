@@ -11,7 +11,7 @@ export type Me = {
 export type Work = {
   company: string;
   positions: WorkPosition[];
-  city: string;
+  city?: string;
   country: string;
   link?: string;
 };
@@ -31,4 +31,12 @@ export type Education = {
   startDate: string;
   endDate: string;
   description: string;
+};
+
+export type Project = {
+  name: string;
+  stacks: string[];
+  description: string;
+  link: string;
+  logo?: string;
 };
