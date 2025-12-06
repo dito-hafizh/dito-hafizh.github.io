@@ -15,6 +15,7 @@ const inter = Inter({
 import { ME } from '@/data';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://dito-hafizh.github.io'),
   title: {
     default: `${ME.name} | ${ME.profession}`,
     template: `%s | ${ME.name}`,
