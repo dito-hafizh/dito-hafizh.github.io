@@ -5,7 +5,7 @@ import { PiVideoConferenceFill } from 'react-icons/pi';
 
 export default function PublicationSection() {
   return (
-    <div className="gap-section flex flex-col">
+    <div className="gap-content md:gap-section flex flex-col">
       <div className="gap-content flex items-center">
         <PiVideoConferenceFill className="text-constant-md md:text-constant-lg font-bold" />
         <h1 className="text-constant-md md:text-constant-lg font-bold">Publications</h1>

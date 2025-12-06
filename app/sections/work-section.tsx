@@ -8,7 +8,7 @@ import { RiHomeOfficeLine } from 'react-icons/ri';
 
 export default function WorkSection() {
   return (
-    <div className="gap-section flex flex-col">
+    <div className="gap-content md:gap-section flex flex-col">
       <div className="gap-content flex items-center">
         <HiOutlineOfficeBuilding className="text-constnat-md md:text-constant-lg font-bold" />
         <h1 className="text-constant-md md:text-constant-lg font-bold">Work Experience</h1>

@@ -6,7 +6,7 @@ import { GrProjects } from 'react-icons/gr';
 
 export default function ProjectSection() {
   return (
-    <div className="gap-section flex flex-col">
+    <div className="gap-content md:gap-section flex flex-col">
       <div className="gap-content flex items-center">
         <GrProjects className="text-constant-md md:text-constant-lg font-bold" />
         <h1 className="text-constant-md md:text-constant-lg font-bold">Projects</h1>

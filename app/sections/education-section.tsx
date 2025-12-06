@@ -6,7 +6,7 @@ import { SiInternetcomputer } from 'react-icons/si';
 
 export default function EducationSection() {
   return (
-    <div id="education" className="gap-section flex flex-col">
+    <div id="education" className="gap-content md:gap-section flex flex-col">
       <div className="gap-content flex items-center">
         <IoIosSchool className="text-constant-md md:text-constant-lg font-bold" />
         <h1 className="text-constant-md md:text-constant-lg font-bold">Education</h1>
