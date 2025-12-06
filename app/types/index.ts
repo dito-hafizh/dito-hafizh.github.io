@@ -49,12 +49,12 @@ export type Publication = {
   date: string;
   description: string;
   link: string;
-}
+};
 
 export type Certification = {
   name: string;
   issuer: string;
   startDate: string;
   endDate: string;
-  link: string; 
-}
+  link: string;
+};

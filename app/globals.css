@@ -6,14 +6,18 @@
 }
 
 @theme {
-  --spacing-mobile: 0.5rem;
+  --spacing-mobile: 10px;
   --spacing-desktop: 1rem;
+
   --spacing-section: 2rem;
   --spacing-section-md: 4rem;
+
   --spacing-content: 10px;
+  --spacing-content-sm: 4px;
 
   --text-constant-lg: 40px;
   --text-constant-md: 24px;
+  --text-constant-sm: 12px;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -36,5 +40,10 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 60px;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 60px;
+  }
 }

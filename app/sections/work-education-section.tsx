@@ -8,7 +8,7 @@ export default function WorkEducationSection() {
   const sections = [WorkSection, EducationSection];
 
   return (
-    <div className="gap-section-md flex flex-row items-start justify-center">
+    <div className="gap-section md:gap-section-md flex flex-col md:flex-row items-start justify-center">
       {sections.map((SectionComponent, index) => (
         <Fragment key={index}>
           <div className="gap-content flex basis-1/2 flex-col">

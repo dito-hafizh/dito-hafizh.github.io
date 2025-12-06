@@ -10,8 +10,8 @@ export default function WorkSection() {
   return (
     <div className="gap-section flex flex-col">
       <div className="gap-content flex items-center">
-        <HiOutlineOfficeBuilding className="text-constant-lg font-bold" />
-        <h1 className="text-constant-lg font-bold">Work Experience</h1>
+        <HiOutlineOfficeBuilding className="text-constnat-md md:text-constant-lg font-bold" />
+        <h1 className="text-constant-md md:text-constant-lg font-bold">Work Experience</h1>
       </div>
       {WORKS.map((work, index) => (
         <Fragment key={work.company}>
@@ -30,9 +30,7 @@ export default function WorkSection() {
                 work.company
               )}
             </h2>
-            <h3>
-              {[work.city, work.country].filter(Boolean).join(', ')}
-            </h3>
+            <h3>{[work.city, work.country].filter(Boolean).join(', ')}</h3>
             {work.positions.map((position) => (
               <div key={position.position}>
                 <p className="font-bold text-gray-500">

@@ -27,17 +27,18 @@ export default function RootLayout({
       <body
         className={`${inter.variable} items-center justify-center antialiased`}
       >
-        <div className="mx-auto w-9/10">
-          <div className="p-desktop gap-section flex flex-row items-center justify-center">
-            <div className="flex basis-1/2 items-center justify-start">
-              <ProfilePic />
-            </div>
-            <div className="flex basis-1/2 items-center justify-center">
-              <Navbar />
-            </div>
+        <Navbar />
+        <div className="mt-section md:mt-section-md mx-auto w-full md:w-9/10 px-content-sm md:px-0">
+          {/* Navbar placeholder removed */}
+          <div className="p-desktop flex flex-col items-center justify-center md:hidden">
+            <ProfilePic
+              className="h-40 w-40 rounded-full object-contain"
+              width={160}
+              height={160}
+            />
           </div>
           {children}
-          <Footer />  
+          <Footer />
         </div>
       </body>
     </html>

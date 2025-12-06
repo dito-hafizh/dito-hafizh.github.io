@@ -6,7 +6,11 @@ type Props = {
   className?: string;
 };
 
-export default function ProfilePic({ width = 120, height = 120, className = "h-30 w-30 rounded-full object-contain" }: Props) {
+export default function ProfilePic({
+  width = 120,
+  height = 120,
+  className = 'h-30 w-30 rounded-full object-contain',
+}: Props) {
   return (
     <Image
       src="/profile.webp"

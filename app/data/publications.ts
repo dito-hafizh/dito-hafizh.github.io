@@ -1,11 +1,12 @@
-import { Publication } from "@/types";
+import { Publication } from '@/types';
 
 export const PUBLICATIONS: Publication[] = [
-    {
-        title: "Corn Pests and Diseases Prediction Using Linear Regression and Natural Spline Methods",
-        publisher: "Institute of Electrical and Electronics Engineers",
-        date: "October 2018",
-        description: `
+  {
+    title:
+      'Corn Pests and Diseases Prediction Using Linear Regression and Natural Spline Methods',
+    publisher: 'Institute of Electrical and Electronics Engineers',
+    date: 'October 2018',
+    description: `
         Food self-sufficiency is a strategic plan that has been set by the Indonesian government 
         to achieve zero hunger for all Indonesian people. One way to achieve it is by improving 
         the productivity of crops cultivation. However, a data from the Indonesian Ministry of 
@@ -23,6 +24,6 @@ export const PUBLICATIONS: Publication[] = [
         data on the areas of corn fields that are attacked by certain pests and diseases based on climatic 
         conditions. We used Linear Regression and Natural Spline as prediction algorithms.
         `,
-        link: "https://ieeexplore.ieee.org/document/8751583"
-    }
+    link: 'https://ieeexplore.ieee.org/document/8751583',
+  },
 ];

@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 type Props = {
   text: string;
@@ -20,10 +20,10 @@ export default function SeeMore({ text, limit = 500 }: Props) {
         {isExpanded ? text : `${text.substring(0, limit)}...`}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="ml-2 text-gray-500 hover:text-gray-700 font-semibold text-sm inline-block"
+          className="ml-2 inline-block text-sm font-semibold text-gray-500 hover:text-gray-700"
         >
-          {isExpanded ? "See Less" : "See More"}
-        </button>  
+          {isExpanded ? 'See Less' : 'See More'}
+        </button>
       </p>
     </div>
   );
