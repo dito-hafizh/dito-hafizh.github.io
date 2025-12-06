@@ -3,6 +3,7 @@ import ProfilePic from '@/ui/profile-pic';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Footer from './layout/footer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -36,6 +37,7 @@ export default function RootLayout({
             </div>
           </div>
           {children}
+          <Footer />  
         </div>
       </body>
     </html>
