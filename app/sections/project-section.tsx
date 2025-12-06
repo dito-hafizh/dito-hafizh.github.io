@@ -1,5 +1,7 @@
-import { PROJECTS } from "@/data/projects";
+import { PROJECTS } from "@/data";
+import SeeMore from "@/ui/see-more";
 import Image from "next/image";
+import Link from "next/link";
 import { GrProjects } from "react-icons/gr";
 
 export default function ProjectSection() {
@@ -27,12 +29,12 @@ export default function ProjectSection() {
                 <h3 className="font-bold">Techonogy Stacks:</h3>
                 <h3 className="font-bold text-gray-500">{project.stacks.filter(Boolean).join(", ")}</h3>
               </div>
-              <p className="text-justify">{project.description}</p>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <SeeMore text={project.description} />
+              <Link href={project.link} target="_blank" rel="noopener noreferrer">
                 <button className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">
                   View Project
                 </button>
-              </a>  
+              </Link>  
             </div>
           ))}
         </div>

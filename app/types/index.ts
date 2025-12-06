@@ -40,3 +40,11 @@ export type Project = {
   link: string;
   logo?: string;
 };
+
+export type Publication = {
+  title: string;
+  publisher: string;
+  date: string;
+  description: string;
+  link: string;
+}

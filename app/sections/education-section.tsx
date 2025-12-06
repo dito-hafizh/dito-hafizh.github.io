@@ -1,4 +1,5 @@
 import { EDUCATIONS } from '@/data';
+import SeeMore from '@/ui/see-more';
 import { IoIosSchool } from 'react-icons/io';
 import { RiHomeOfficeLine } from 'react-icons/ri';
 import { SiInternetcomputer } from 'react-icons/si';
@@ -26,7 +27,7 @@ export default function EducationSection() {
             <SiInternetcomputer className="text-constant-md font-bold" />
             <h3 className="font-bold">{education.degree}</h3>
           </div>
-          <p className="text-justify">{education.description}</p>
+          <SeeMore text={education.description} />
         </div>
       ))}
     </div>
