@@ -48,3 +48,11 @@ export type Publication = {
   description: string;
   link: string;
 }
+
+export type Certification = {
+  name: string;
+  issuer: string;
+  startDate: string;
+  endDate: string;
+  link: string; 
+}

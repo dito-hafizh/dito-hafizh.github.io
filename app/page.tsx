@@ -1,10 +1,11 @@
 import AboutSection from '@/sections/about-section';
 import ProjectSection from '@/sections/project-section';
 import WorkEducationSection from '@/sections/work-education-section';
+import CertificationSection from './sections/certification-section';
 import PublicationSection from './sections/publication-section';
 
 export default function Home() {
-  const sections = [AboutSection, WorkEducationSection, ProjectSection, PublicationSection];
+  const sections = [AboutSection, WorkEducationSection, ProjectSection, PublicationSection, CertificationSection];
 
   return (  
     <div className="flex flex-col items-start justify-center">

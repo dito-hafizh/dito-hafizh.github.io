@@ -15,6 +15,9 @@ export default function PublicationSection() {
                     <div className="flex items-center gap-content">
                         <h2 className="text-constant-md font-bold">{publication.title}</h2>
                     </div>
+                    <div className="flex items-center gap-content">
+                        <h3 className="font-bold text-gray-500">{publication.date}</h3>
+                    </div>
                     <SeeMore text={publication.description} />
                     <Link href={publication.link} target="_blank" rel="noopener noreferrer">
                         <button className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded">
