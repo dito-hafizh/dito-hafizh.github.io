@@ -22,7 +22,7 @@ export default function AboutSection() {
           </div>
           <div className="flex flex-col">
             <h1 className="text-constant-md md:text-constant-lg font-bold">{ME.name}</h1>
-            <h1 className="text-constant-md md:text-constant-lg font-bold">{ME.profession}</h1>
+            <h1 className="text-constant-md md:text-constant-lg text-nowrap font-bold">{ME.profession}</h1>
           </div>
         </div>
         <h1 className="pt-content md:pt-section text-justify">
