@@ -2,7 +2,7 @@
 
 import { ME } from '@/data';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
 
 import ProfilePic from '@/ui/profile-pic';
 
@@ -21,8 +21,12 @@ export default function AboutSection() {
             />
           </div>
           <div className="flex flex-col">
-            <h1 className="text-constant-md md:text-constant-lg font-bold">{ME.name}</h1>
-            <h1 className="text-constant-md md:text-constant-lg text-nowrap font-bold">{ME.profession}</h1>
+            <h1 className="text-constant-md md:text-constant-lg font-bold">
+              {ME.name}
+            </h1>
+            <h1 className="text-constant-md md:text-constant-lg font-bold text-nowrap">
+              {ME.profession}
+            </h1>
           </div>
         </div>
         <h1 className="pt-content md:pt-section text-justify">
@@ -42,6 +46,9 @@ export default function AboutSection() {
             </Link>
             <Link href={ME.github} target="_blank" rel="noopener noreferrer">
               <FaGithub className="text-constant-md md:text-5xl" />
+            </Link>
+            <Link href={ME.medium} target="_blank" rel="noopener noreferrer">
+              <FaMedium className="text-constant-md md:text-5xl" />
             </Link>
           </div>
         </div>

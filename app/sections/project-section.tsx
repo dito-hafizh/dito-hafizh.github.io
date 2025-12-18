@@ -9,7 +9,9 @@ export default function ProjectSection() {
     <div className="gap-content md:gap-section flex flex-col">
       <div className="gap-content flex items-center">
         <GrProjects className="text-constant-md md:text-constant-lg font-bold" />
-        <h1 className="text-constant-md md:text-constant-lg font-bold">Projects</h1>
+        <h1 className="text-constant-md md:text-constant-lg font-bold">
+          Projects
+        </h1>
       </div>
       {PROJECTS.map((project) => (
         <div key={project.name} className="gap-content flex flex-col">

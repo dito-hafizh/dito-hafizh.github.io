@@ -11,7 +11,9 @@ export default function WorkSection() {
     <div className="gap-content md:gap-section flex flex-col">
       <div className="gap-content flex items-center">
         <HiOutlineOfficeBuilding className="text-constnat-md md:text-constant-lg font-bold" />
-        <h1 className="text-constant-md md:text-constant-lg font-bold">Work Experience</h1>
+        <h1 className="text-constant-md md:text-constant-lg font-bold">
+          Work Experience
+        </h1>
       </div>
       {WORKS.map((work, index) => (
         <Fragment key={work.company}>

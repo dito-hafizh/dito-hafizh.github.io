@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: `${ME.name} Portfolio`,
     images: [
       {
-        url: 'https://dito-hafizh.github.io/profile.webp',
+        url: 'https://dito-hafizh.github.io/image_metadata.webp',
         width: 1200,
         height: 630,
         alt: `${ME.name} - ${ME.profession}`,
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${ME.name} | ${ME.profession}`,
     description: ME.description,
-    images: ['https://dito-hafizh.github.io/profile.webp'],
+    images: ['https://dito-hafizh.github.io/image_metadata.webp'],
   },
   robots: {
     index: true,
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children, 
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -84,7 +84,7 @@ export default function RootLayout({
         className={`${inter.variable} items-center justify-center antialiased`}
       >
         <Navbar />
-        <div className="mt-section md:mt-section-md mx-auto w-full md:w-9/10 px-content-sm md:px-0">
+        <div className="mt-section md:mt-section-md px-content-sm mx-auto w-full md:w-9/10 md:px-0">
           {/* Navbar placeholder removed */}
           <div className="p-desktop flex flex-col items-center justify-center md:hidden">
             <ProfilePic

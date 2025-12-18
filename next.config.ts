@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   // 1. Tell Next.js to produce static HTML
@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
   // 2. Disable server-based image optimization
   images: {
-    unoptimized: true, 
+    unoptimized: true,
   },
 
   // 3. OPTIONAL: Only if your repo is NOT username.github.io

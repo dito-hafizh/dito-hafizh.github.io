@@ -8,7 +8,9 @@ export default function CertificationSection() {
     <div className="gap-content md:gap-section flex flex-col">
       <div className="gap-content flex items-center">
         <GrCertificate className="text-constant-md md:text-constant-lg font-bold" />
-        <h1 className="text-constant-md md:text-constant-lg font-bold">Certifications</h1>
+        <h1 className="text-constant-md md:text-constant-lg font-bold">
+          Certifications
+        </h1>
       </div>
       {CERTIFICATIONS.map((certification) => (
         <div key={certification.name} className="gap-content flex flex-col">

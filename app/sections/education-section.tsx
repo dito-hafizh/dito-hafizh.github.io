@@ -9,7 +9,9 @@ export default function EducationSection() {
     <div id="education" className="gap-content md:gap-section flex flex-col">
       <div className="gap-content flex items-center">
         <IoIosSchool className="text-constant-md md:text-constant-lg font-bold" />
-        <h1 className="text-constant-md md:text-constant-lg font-bold">Education</h1>
+        <h1 className="text-constant-md md:text-constant-lg font-bold">
+          Education
+        </h1>
       </div>
       {EDUCATIONS.map((education) => (
         <div key={education.school} className="gap-content flex flex-col">

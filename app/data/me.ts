@@ -15,4 +15,5 @@ export const ME: Me = {
   country: 'Indonesia',
   github: 'https://github.com/dito-hafizh',
   linkedin: 'https://id.linkedin.com/in/dito-hafizh-b882596b',
+  medium: 'https://medium.com/@ditohafizh',
 };

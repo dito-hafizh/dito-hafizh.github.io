@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer id="footer" className="flex flex-col w-full gap-section py-section">
+    <footer id="footer" className="gap-section py-section flex w-full flex-col">
       <hr className="border-t-2 border-gray-300" />
-      <div className="w-full flex flex-col md:flex-row items-center">
+      <div className="flex w-full flex-col items-center md:flex-row">
         <div className="md:flex-1">
           <h1>© 2025 Dito Hafizh - All rights reserved</h1>
         </div>

@@ -8,6 +8,7 @@ export type Me = {
   country: string;
   github: string;
   linkedin: string;
+  medium: string;
 };
 
 export type Work = {

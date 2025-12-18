@@ -15,10 +15,10 @@ Welcome to the source code of my personal website. This project serves as a mini
 
 This project uses the modern **Next.js App Router** with a fully static export configuration for GitHub Pages.
 
-* **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
-* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) (CSS Variables & Theme)
-* **Language:** TypeScript
-* **Deployment:** GitHub Actions (CI/CD)
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) (CSS Variables & Theme)
+- **Language:** TypeScript
+- **Deployment:** GitHub Actions (CI/CD)
 
 ## 📂 Project Structure
 
@@ -38,3 +38,4 @@ A flat architecture where UI components and data are colocated within the `app` 
 ├── public/            # Static assets (images, favicon)
 ├── next.config.ts     # Static export configuration
 └── tailwind.config.ts # (Optional if using v4 CSS-only config)
+```
