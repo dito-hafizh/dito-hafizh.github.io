@@ -19,17 +19,19 @@ export default function EducationSection() {
             <RiHomeOfficeLine className="text-constant-lg font-bold" />
             <h2 className="text-constant-md font-bold">{education.school}</h2>
           </div>
-          <h3>
+          <h3 className="font-bold">
             {education.city}, {education.country}
           </h3>
-          <p className="font-bold text-gray-500">
-            {education.startDate} - {education.endDate}
-          </p>
-          <div className="gap-content flex items-center">
-            <SiInternetcomputer className="text-constant-md font-bold" />
-            <h3 className="font-bold">{education.degree}</h3>
+          <div className="card-standard">
+            <p className="font-bold text-gray-500">
+              {education.startDate} - {education.endDate}
+            </p>
+            <div className="gap-content flex items-center">
+              <SiInternetcomputer className="text-constant-md font-bold" />
+              <h3 className="font-bold">{education.degree}</h3>
+            </div>
+            <SeeMore text={education.description} />
           </div>
-          <SeeMore text={education.description} />
         </div>
       ))}
     </div>

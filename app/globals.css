@@ -47,3 +47,9 @@ html {
     scroll-padding-top: 60px;
   }
 }
+
+@layer components {
+  .card-standard {
+    @apply bg-white border-l-4 border-gray-500 shadow-sm rounded-r-lg p-content text-justify overflow-hidden;
+  }
+}

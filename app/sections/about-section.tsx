@@ -29,9 +29,7 @@ export default function AboutSection() {
             </h1>
           </div>
         </div>
-        <h1 className="pt-content md:pt-section text-justify">
-          {ME.description}
-        </h1>
+        <h1 className="card-standard">{ME.description}</h1>
       </div>
       <div className="flex basis-1/2 flex-col items-center">
         <div className="gap-content-sm md:gap-content flex flex-col items-center md:items-start">
