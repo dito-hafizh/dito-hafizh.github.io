@@ -43,9 +43,6 @@ export default function WorkSection() {
               </div>
             ))}
           </div>
-          {index < WORKS.length - 1 && (
-            <hr className="border-t-2 border-gray-300" />
-          )}
         </Fragment>
       ))}
     </div>

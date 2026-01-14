@@ -50,6 +50,6 @@ html {
 
 @layer components {
   .card-standard {
-    @apply bg-white border-l-4 border-gray-500 shadow-sm rounded-r-lg p-content text-justify overflow-hidden;
+    @apply bg-white border-l-4 border-gray-500 shadow-sm rounded-r-lg p-content text-justify overflow-hidden flex flex-col gap-content;
   }
 }
