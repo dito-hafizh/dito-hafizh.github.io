@@ -15,7 +15,7 @@ export default function WorkSection() {
           Work Experience
         </h1>
       </div>
-      {WORKS.map((work, index) => (
+      {WORKS.map((work) => (
         <Fragment key={work.company}>
           <div className="gap-content flex flex-col">
             <h2 className="text-constant-md gap-content flex items-center font-bold">

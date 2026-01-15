@@ -29,7 +29,7 @@ export default function ProjectSection() {
           </div>
           <div className="card-standard">
             <div className="gap-content flex items-center">
-              <h3 className="font-bold">Techonogy Stacks:</h3>
+              <h3 className="font-bold">Technology Stacks:</h3>
               <h3 className="font-bold text-gray-500">
                 {project.stacks.filter(Boolean).join(', ')}
               </h3>
