@@ -32,7 +32,9 @@ export default function WorkSection() {
                 work.company
               )}
             </h2>
-            <h3 className='font-bold'>{[work.city, work.country].filter(Boolean).join(', ')}</h3>
+            <h3 className="font-bold">
+              {[work.city, work.country].filter(Boolean).join(', ')}
+            </h3>
             {work.positions.map((position) => (
               <div key={position.position} className="card-standard">
                 <p className="font-bold text-gray-500">

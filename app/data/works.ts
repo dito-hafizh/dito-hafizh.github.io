@@ -32,7 +32,7 @@ export const WORKS: Work[] = [
     positions: [
       {
         position: 'Lead Software Architect',
-        startDate: 'Jun 2020',
+        startDate: 'Jan 2020',
         endDate: 'Jul 2020',
         description: `Communicate and translate the business goals into 
                 usable software solution. Also responsible for deciding and developing 
@@ -41,7 +41,7 @@ export const WORKS: Work[] = [
       {
         position: 'Software Engineer',
         startDate: 'Jun 2019',
-        endDate: 'Jun 2020',
+        endDate: 'Jan 2020',
         description: `Responsible for developing the full stacks of mobile app from back end, 
                 front end, and DevOps. The stacks are Golang and Elixir as back end, Angular as web, 
                 and Flutter as mobile. Also responsible for managing the infrastructures with focus 
