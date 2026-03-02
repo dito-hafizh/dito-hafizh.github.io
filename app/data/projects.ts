@@ -15,7 +15,7 @@ export const PROJECTS: Project[] = [
         Also can go to maintainer’s github repo and post an issue or a new commit to 
         these repos: weka-learning and extraction-feature
         `,
-    link: 'https://play.google.com/apps/testing/com.coder.moonshot.cropslab',
+    link: 'https://play.google.com/store/apps/details?id=com.coder.moonshot.cropslab',
     logo: '/cropslab_logo.png',
   },
 ];
