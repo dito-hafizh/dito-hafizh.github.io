@@ -6,11 +6,13 @@ import React, { useEffect, useRef } from 'react';
 interface Props {
   children: React.ReactNode;
   width?: 'fit-content' | '100%';
+  delay?: number;
+  y?: number;
 }
 
-export const Reveal = ({ children, width = 'fit-content' }: Props) => {
+export const Reveal = ({ children, width = 'fit-content', delay = 0.25, y = 30 }: Props) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }); // 'once: true' means it won't animate out when scrolling up
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const mainControls = useAnimation();
 
@@ -21,15 +23,21 @@ export const Reveal = ({ children, width = 'fit-content' }: Props) => {
   }, [isInView, mainControls]);
 
   return (
-    <div ref={ref} style={{ position: 'relative', width, overflow: 'hidden' }}>
+    <div ref={ref} style={{ position: 'relative', width, overflow: 'visible' }}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 75 },
+          hidden: { opacity: 0, y: y },
           visible: { opacity: 1, y: 0 },
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{ 
+          type: "spring",
+          damping: 20,
+          stiffness: 100,
+          delay: delay,
+          duration: 0.6
+        }}
       >
         {children}
       </motion.div>

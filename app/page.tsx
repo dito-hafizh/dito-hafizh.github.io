@@ -15,28 +15,18 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-start justify-center">
-      {sections.map(({ component: SectionComponent, id }) =>
-        id == 'work' ? (
+    <div className="flex flex-col items-start justify-center pb-4">
+      {sections.map(({ component: SectionComponent, id }, index) => (
+        <Reveal key={id} width="100%" delay={0.1 * (index + 1)}>
           <section
             key={id}
-            className="md:p-desktop p-mobile py-section w-full"
+            className="py-8 md:py-12 w-full"
             id={id}
           >
             <SectionComponent />
           </section>
-        ) : (
-          <Reveal key={id}>
-            <section
-              key={id}
-              className="md:p-desktop p-mobile py-section w-full"
-              id={id}
-            >
-              <SectionComponent />
-            </section>
-          </Reveal>
-        )
-      )}
+        </Reveal>
+      ))}
     </div>
   );
 }

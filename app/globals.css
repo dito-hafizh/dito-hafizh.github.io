@@ -1,41 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050C0C;
+  --foreground: #ffffff;
+  --accent: #139226;
+  --accent-secondary: #34AC4C;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.1);
 }
 
 @theme {
-  --spacing-mobile: 10px;
-  --spacing-desktop: 1rem;
+  --spacing-mobile: 8px;
+  --spacing-desktop: 1.25rem;
 
-  --spacing-section: 2rem;
+  --spacing-section: 2.5rem;
   --spacing-section-md: 4rem;
 
-  --spacing-content: 10px;
-  --spacing-content-sm: 4px;
+  --spacing-content: 0.75rem;
+  --spacing-content-sm: 0.375rem;
 
   --text-constant-lg: 40px;
   --text-constant-md: 24px;
-  --text-constant-sm: 12px;
+  --text-constant-sm: 14px;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #000000;
-  }
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -44,12 +45,52 @@ html {
 
 @media (min-width: 768px) {
   html {
-    scroll-padding-top: 60px;
+    scroll-padding-top: 80px;
   }
 }
 
 @layer components {
   .card-standard {
-    @apply bg-white border-l-4 border-gray-500 shadow-sm rounded-r-lg p-content text-justify overflow-hidden flex flex-col gap-content;
+    @apply bg-[var(--card-bg)] backdrop-blur-md border border-[var(--card-border)] rounded-2xl p-6 text-left overflow-hidden flex flex-col gap-4 transition-all duration-300 hover:border-accent/30 hover:shadow-[0_0_20px_rgba(19,146,38,0.1)];
   }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent-secondary;
+  }
+
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-secondary text-white font-bold py-2 px-6 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(19,146,38,0.3)] hover:shadow-[0_0_25px_rgba(52,172,76,0.5)];
+  }
+}
+
+/* Background Glows */
+.bg-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glow-1 {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(19, 146, 38, 0.08) 0%, transparent 70%);
+  filter: blur(80px);
+}
+
+.glow-2 {
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(52, 172, 76, 0.05) 0%, transparent 70%);
+  filter: blur(100px);
 }

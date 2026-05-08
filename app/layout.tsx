@@ -81,21 +81,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} items-center justify-center antialiased`}
+        className={`${inter.variable} min-h-screen items-center justify-center antialiased bg-background text-foreground`}
       >
+        <div className="bg-glow">
+          <div className="glow-1"></div>
+          <div className="glow-2"></div>
+        </div>
         <Navbar />
-        <div className="mt-section md:mt-section-md px-content-sm mx-auto w-full md:w-9/10 md:px-0">
-          {/* Navbar placeholder removed */}
+        <main className="mt-section md:mt-section-md px-4 mx-auto w-full max-w-5xl md:px-8">
           <div className="p-desktop flex flex-col items-center justify-center md:hidden">
             <ProfilePic
-              className="h-40 w-40 rounded-full object-contain"
+              className="h-40 w-40 rounded-full object-contain border-2 border-accent/20 shadow-[0_0_30px_rgba(19,146,38,0.1)]"
               width={160}
               height={160}
             />
           </div>
           {children}
           <Footer />
-        </div>
+        </main>
       </body>
     </html>
   );

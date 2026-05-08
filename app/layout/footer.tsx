@@ -1,15 +1,16 @@
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <footer id="footer" className="gap-section py-section flex w-full flex-col">
-      <hr className="border-t-2 border-gray-300" />
-      <div className="flex w-full flex-col items-center md:flex-row">
-        <div className="md:flex-1">
-          <h1>© 2025 Dito Hafizh - All rights reserved</h1>
+    <footer id="footer" className="mt-4 pb-12 pt-8 border-t border-white/5 w-full">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="text-gray-500 text-sm font-medium tracking-wide">
+          © <span suppressHydrationWarning>{currentYear}</span> <span className="text-white">Dito Hafizh</span>. All rights reserved.
         </div>
-        <div className="md:flex-1">
-          <h1>
-            Made with <span className="text-red-500">❤️</span>
-          </h1>
+        <div className="flex items-center gap-2 text-gray-500 text-sm font-medium tracking-wide">
+          <span>Crafted with</span>
+          <span className="text-accent">❤️</span>
+          <span>in Surabaya</span>
         </div>
       </div>
     </footer>
