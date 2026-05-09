@@ -8,61 +8,64 @@ import { motion } from 'framer-motion';
 
 export default function WorkSection() {
   return (
-    <div className="gap-6 flex flex-col">
-      <div className="flex items-center gap-3">
-        <div className="p-2 bg-accent/10 rounded-lg">
-          <HiOutlineOfficeBuilding className="text-3xl text-accent" />
-        </div>
-        <h2 className="text-3xl font-bold tracking-tight">
-          Work Experience
-        </h2>
-      </div>
-      <div className="space-y-8">
-        {WORKS.map((work) => (
-          <div key={work.company} className="flex flex-col gap-3">
-            <Reveal width="100%" y={10}>
-              <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
-                <h3 className="text-2xl font-bold flex items-center gap-2">
-                  {work.link ? (
-                    <Link
-                      href={work.link}
-                      target="_blank"
-                      className="text-gradient hover:opacity-80 transition-opacity"
-                    >
-                      {work.company}
-                    </Link>
-                  ) : (
-                    <span className="text-gradient">{work.company}</span>
-                  )}
-                </h3>
-                <span className="text-sm font-semibold text-gray-500 tracking-wider uppercase">
-                  {[work.city, work.country].filter(Boolean).join(', ')}
-                </span>
-              </div>
-            </Reveal>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              {work.positions.map((position, pIdx) => (
-                <Reveal key={position.position} delay={0.1 * pIdx} width="100%">
-                  <motion.div 
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                    className="card-standard relative overflow-hidden group h-full"
-                  >
-                    <div className="absolute top-0 left-0 w-1 h-full bg-accent scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
-                      <h4 className="text-xl font-bold text-white group-hover:text-accent transition-colors">{position.position}</h4>
-                      <span className="text-sm font-medium px-3 py-1 bg-white/5 rounded-full text-accent border border-accent/20">
-                        {position.startDate} — {position.endDate}
-                      </span>
-                    </div>
-                    <p className="text-gray-400 leading-relaxed">{position.description}</p>
-                  </motion.div>
-                </Reveal>
-              ))}
+    <div className="h-full">
+      <Reveal width="100%" y={10}>
+        <motion.div 
+          whileHover={{ y: -5 }}
+          className="bento-card h-full"
+        >
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-2 bg-accent/10 rounded-lg">
+              <HiOutlineOfficeBuilding className="text-2xl text-accent" />
             </div>
+            <h2 className="text-2xl font-bold text-white">Experience</h2>
           </div>
-        ))}
-      </div>
+
+          <div className="space-y-8 relative before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-px before:bg-white/10">
+            {WORKS.map((work) => (
+              <div key={work.company} className="relative pl-12">
+                <div className="absolute left-0 top-1.5 w-10 h-10 bg-[#0A0A0A] border border-white/10 rounded-full flex items-center justify-center z-10 shadow-xl">
+                  <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                </div>
+                
+                <div className="flex flex-col gap-1 mb-4">
+                  <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                    {work.link ? (
+                      <Link href={work.link} target="_blank" className="hover:text-accent transition-colors">
+                        {work.company}
+                      </Link>
+                    ) : (
+                      work.company
+                    )}
+                  </h3>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
+                    {[work.city, work.country].filter(Boolean).join(', ')}
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  {work.positions.map((position) => (
+                    <div 
+                      key={position.position} 
+                      className="group"
+                    >
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-2">
+                        <h4 className="text-md font-bold text-gray-200 group-hover:text-accent transition-colors">{position.position}</h4>
+                        <span className="text-[10px] font-bold px-2 py-1 bg-white/5 rounded-md text-accent border border-accent/20 whitespace-nowrap w-fit">
+                          {position.startDate} — {position.endDate}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-400 leading-relaxed">
+                        {position.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </Reveal>
     </div>
   );
 }

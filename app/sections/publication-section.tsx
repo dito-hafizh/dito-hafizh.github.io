@@ -1,52 +1,62 @@
 'use client';
 
 import { PUBLICATIONS } from '@/data';
-import SeeMore from '@/ui/see-more';
 import Link from 'next/link';
 import { PiVideoConferenceFill } from 'react-icons/pi';
 import { Reveal } from '@/ui/reveal';
+import { motion } from 'framer-motion';
 
 export default function PublicationSection() {
   return (
-    <div className="gap-6 flex flex-col">
-      <div className="flex items-center gap-3">
-        <div className="p-2 bg-accent/10 rounded-lg">
-          <PiVideoConferenceFill className="text-3xl text-accent" />
-        </div>
-        <h2 className="text-3xl font-bold tracking-tight">
-          Publications
-        </h2>
-      </div>
-      <div className="space-y-6">
-        {PUBLICATIONS.map((publication, index) => (
-          <Reveal key={publication.title} delay={0.1 * index} width="100%">
-            <div className="flex flex-col gap-3">
-              <h3 className="text-2xl font-bold text-gradient">{publication.title}</h3>
-              <div className="card-standard relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-1 h-full bg-accent scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
-                <div className="flex flex-col gap-3">
-                  <span className="text-sm font-semibold text-accent/80 tracking-wider uppercase">
-                    {publication.date}
-                  </span>
-                  <div className="text-gray-400 leading-relaxed">
-                    <SeeMore text={publication.description} />
+    <div className="h-full">
+      <Reveal width="100%" y={10}>
+        <motion.div 
+          whileHover={{ y: -5 }}
+          className="bento-card h-full"
+        >
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-2 bg-accent/10 rounded-lg">
+              <PiVideoConferenceFill className="text-2xl text-accent" />
+            </div>
+            <h2 className="text-2xl font-bold text-white">Publications</h2>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6">
+            {PUBLICATIONS.map((publication) => (
+              <div 
+                key={publication.title} 
+                className="group bg-white/[0.02] p-6 rounded-2xl border border-white/5 hover:border-accent/20 transition-all duration-300 flex flex-col justify-between"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-white/5 rounded-xl border border-white/10">
+                      <PiVideoConferenceFill className="text-xl text-accent" />
+                    </div>
+                    <span className="text-[10px] font-bold text-accent uppercase tracking-widest">{publication.date}</span>
                   </div>
-                  <div className="mt-2">
-                    <Link
-                      href={publication.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary text-sm px-8 inline-block"
-                    >
-                      View Publication
-                    </Link>
-                  </div>
+                  
+                  <h3 className="text-lg font-bold text-white leading-tight">{publication.title}</h3>
+                  
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    {publication.description}
+                  </p>
+                </div>
+
+                <div className="mt-8">
+                  <Link
+                    href={publication.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary w-full text-[10px] py-3 block text-center uppercase tracking-widest font-black"
+                  >
+                    View Publication
+                  </Link>
                 </div>
               </div>
-            </div>
-          </Reveal>
-        ))}
-      </div>
+            ))}
+          </div>
+        </motion.div>
+      </Reveal>
     </div>
   );
 }

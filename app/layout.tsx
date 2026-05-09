@@ -88,14 +88,7 @@ export default function RootLayout({
           <div className="glow-2"></div>
         </div>
         <Navbar />
-        <main className="mt-section md:mt-section-md px-4 mx-auto w-full max-w-5xl md:px-8">
-          <div className="p-desktop flex flex-col items-center justify-center md:hidden">
-            <ProfilePic
-              className="h-40 w-40 rounded-full object-contain border-2 border-accent/20 shadow-[0_0_30px_rgba(19,146,38,0.1)]"
-              width={160}
-              height={160}
-            />
-          </div>
+        <main className="mt-section md:mt-section-md px-4 mx-auto w-full max-w-7xl md:px-8">
           {children}
           <Footer />
         </main>

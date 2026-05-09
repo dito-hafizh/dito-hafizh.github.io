@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   width="100%"
+   height="100%"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="dark-transparent.svg"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.73182764"
+     inkscape:cx="125.02944"
+     inkscape:cy="367.57289"
+     inkscape:window-width="1440"
+     inkscape:window-height="777"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <rect
+     width="512"
+     height="512"
+     rx="115"
+     fill="#1a1a1a"
+     id="rect1"
+     x="0"
+     y="0"
+     style="display:none" />
+  <text
+     x="135"
+     y="395"
+     font-family="'Didot', 'Bodoni MT', 'Georgia', serif"
+     font-size="340"
+     font-weight="bold"
+     fill="#000000"
+     id="text1">V</text>
+  <text
+     x="125"
+     y="385"
+     font-family="'Didot', 'Bodoni MT', 'Georgia', serif"
+     font-size="340"
+     font-weight="bold"
+     fill="#E3D5CA"
+     id="text2">V</text>
+  <rect
+     x="350"
+     y="270"
+     width="90"
+     height="24"
+     fill="#000000"
+     id="rect2" />
+  <rect
+     x="340"
+     y="260"
+     width="90"
+     height="24"
+     fill="#C5A880"
+     id="rect3" />
+</svg>

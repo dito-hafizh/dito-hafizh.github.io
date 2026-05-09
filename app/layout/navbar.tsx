@@ -12,10 +12,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isFooterVisible, setIsFooterVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+      
+      // Hide on scroll down, show on scroll up
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+      setIsScrolled(currentScrollY > 20);
 
       const footer = document.getElementById('footer');
       if (footer) {
@@ -29,9 +41,9 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const navItems = [
     { name: 'Work', id: 'work', icon: BsBriefcaseFill },
@@ -41,18 +53,38 @@ export default function Navbar() {
     { name: 'Certification', id: 'certifications', icon: GrCertificate },
   ];
 
+  // Helper to determine Y translation
+  const getYTranslation = () => {
+    if (isFooterVisible) return 100;
+    if (!isVisible) {
+      // On mobile (bottom dock), hide by moving down. On desktop (top bar), hide by moving up.
+      const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+      return isMobile ? 100 : -100;
+    }
+    return 0;
+  };
+
   return (
     <motion.nav
       initial={false}
       animate={{
-        y: isFooterVisible ? 100 : 0,
-        opacity: isFooterVisible ? 0 : 1,
-        backgroundColor: isScrolled ? 'rgba(5, 12, 12, 0.9)' : 'rgba(5, 12, 12, 0)',
-        borderColor: isScrolled ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0)',
-        boxShadow: isScrolled ? '0 4px 20px rgba(0,0,0,0.5)' : 'none',
+        y: getYTranslation(),
+        opacity: isFooterVisible || !isVisible ? 0 : 1,
+        boxShadow: isScrolled ? '0 10px 30px rgba(0,0,0,0.5)' : 'none',
       }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-      className={`/* Mobile: Bottom Dock */ /* Desktop: Top Navbar */ pointer-events-none fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center justify-center gap-6 rounded-2xl border border-white/10 px-6 py-4 shadow-2xl backdrop-blur-xl md:top-0 md:right-0 md:bottom-auto md:left-0 md:translate-x-0 md:gap-0 md:rounded-none md:border-b md:px-0 md:py-4`}
+      className={`
+        /* Mobile: Bottom Dock */
+        fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center justify-center gap-6 rounded-2xl px-6 py-4 shadow-2xl backdrop-blur-2xl pointer-events-none
+        border border-white/10 bg-[#020606]/80
+        
+        /* Desktop: Top Navbar */
+        md:top-0 md:right-0 md:bottom-auto md:left-0 md:translate-x-0 md:gap-0 md:rounded-none md:border-b md:px-0 md:py-4
+        ${isScrolled ? 'md:bg-[#020606]/80 md:border-white/10' : 'md:bg-transparent md:border-transparent'}
+      `}
+      style={{
+        boxShadow: 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.15)',
+      }}
     >
       {/* Profile Pic - Only visible on Desktop when scrolled */}
       <AnimatePresence>

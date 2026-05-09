@@ -8,19 +8,13 @@ export const WORKS: Work[] = [
         position: 'Lead Interface Developer',
         startDate: 'Jan 2023',
         endDate: 'Present',
-        description: `Take charge of product review specifications and requirements. 
-                Responsible for appraising new interface requirements and also ensures 
-                that all integration run smoothly without a glitch.`,
+        description: 'Overseeing product specifications and interface requirements. Leading technical appraisals and ensuring seamless cross-system integrations across enterprise interface servers.',
       },
       {
         position: 'R&D Interface Developer',
         startDate: 'Jul 2020',
         endDate: 'Jan 2023',
-        description: `Take full responsibility of company’s existing and new products 
-                that run on Interface server or middleware devices. Also recommend the nature and 
-                scope of present and future product versions and lines by reviewing product 
-                specifications and requirements; appraising new product ideas and/or product or 
-                positioning changes by working closely with VP of Engineering and VP of Product Design.`,
+        description: 'Architected and maintained product lines on interface and middleware servers. Collaborated with Engineering and Product leads to define the roadmap for next-gen product versions.',
       },
     ],
     city: 'Remote',
@@ -34,18 +28,13 @@ export const WORKS: Work[] = [
         position: 'Lead Software Architect',
         startDate: 'Jan 2020',
         endDate: 'Jul 2020',
-        description: `Communicate and translate the business goals into 
-                usable software solution. Also responsible for deciding and developing 
-                the best technology stacks and software design based on the requirement of the problems.`,
+        description: 'Translated strategic business goals into high-performance software architectures. Spearheaded the selection of optimized tech stacks and scalable software design patterns.',
       },
       {
         position: 'Software Engineer',
         startDate: 'Jun 2019',
         endDate: 'Jan 2020',
-        description: `Responsible for developing the full stacks of mobile app from back end, 
-                front end, and DevOps. The stacks are Golang and Elixir as back end, Angular as web, 
-                and Flutter as mobile. Also responsible for managing the infrastructures with focus 
-                on Google Cloud. The apps mostly focus on Chat and Map for property maintenance.`,
+        description: 'Developed full-stack mobile applications using Golang/Elixir backends, Angular web frontends, and Flutter mobile apps. Managed GCP-based cloud infrastructure with a focus on real-time chat and mapping.',
       },
     ],
     country: 'Batam & Singapore',
@@ -57,9 +46,7 @@ export const WORKS: Work[] = [
         position: 'Full Stack Developer',
         startDate: 'Feb 2018',
         endDate: 'Sep 2018',
-        description: `Responsible for the maintenance of an e-commerce web application. 
-                The stack is PHP Web Application built by Code Igniter framework. 
-                In charge for every flow in the system especially in the Frontend parts.`,
+        description: 'Maintained and optimized an e-commerce platform built with PHP (CodeIgniter). Focused on frontend performance and streamlining complex system workflows.',
       },
     ],
     city: 'Surabaya',
