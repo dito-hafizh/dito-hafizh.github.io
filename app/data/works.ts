@@ -22,7 +22,7 @@ export const WORKS: Work[] = [
     link: 'https://trevo.ai',
   },
   {
-    company: 'Maple Intelligence SG',
+    company: 'Forest Technologies (Previously Maple Intelligence SG)',
     positions: [
       {
         position: 'Lead Software Architect',
